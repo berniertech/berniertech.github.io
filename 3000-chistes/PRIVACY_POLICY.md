@@ -1,6 +1,6 @@
 # Privacy Policy for 3000 Chistes
 
-**Effective Date:** [Date you publish the app]
+**Effective Date:** 2025/12/08
 
 Thank you for using "3000 Chistes," a mobile application developed by Bernier Tech ltd ("we," "us," or "our"). This privacy policy outlines our practices concerning the information that our app may handle.
 
