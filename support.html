@@ -3,139 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support – Bernier Tech</title>
-
-  <style>
-    :root {
-      --primary: #1a3d6f;
-      --accent: #d62828;
-      --light: #f5f5f5;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: var(--light);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #0d1b2a, #1b263b);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    header img { width: 140px; margin-bottom: 20px; }
-
-    nav {
-      margin-top: 25px;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .section {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    }
-
-    h2 { color: var(--primary); font-size: 1.9rem; }
-    h3 { color: var(--primary); }
-
-    ul li { margin-bottom: 10px; }
-
-    hr {
-      margin: 50px 0;
-      border: none;
-      border-top: 1px solid #ccc;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #666;
-      margin-top: 40px;
-    }
-  </style>
+  <title>Support | Bernier Tech</title>
+  <link rel="alternate" hreflang="en" href="https://berniertech.com/support.html" />
+  <link rel="alternate" hreflang="es" href="https://berniertech.com/es/support.html" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Bernier Tech Logo" />
+        <span>
+          <span class="brand-title">Bernier Tech</span>
+          <span class="brand-subtitle">FinOps · AWS · SRE · Cloud Advisory</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-group">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="support.html">Support</a>
+          <a href="security.html">Security</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+        <div class="nav-group">
+          <span class="lang-switch" aria-label="Language switcher">
+            <span class="current">EN</span>
+            <span>/</span>
+            <a href="es/support.html" lang="es" hreflang="es">ES</a>
+          </span>
+          <a class="nav-cta" href="contact.html">Book a Consultation</a>
+        </div>
+      </nav>
+    </div>
 
-  <header>
-    <img src="logo.png" alt="Bernier Tech Logo" />
-    <h1>Bernier Tech</h1>
-    <p>DevOps · SRE · Cloud Engineering · Systems Architecture</p>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="support.html">Support</a>
-      <a href="security.html">Security</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </nav>
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Support</span>
+        <h1>Email-based support with clear prioritization and professional response handling.</h1>
+        <p>Bernier Tech provides technical support for customers and active engagements, with urgent issues prioritized based on severity and operational impact.</p>
+      </div>
+      <aside class="hero-card">
+        <h2>Support email</h2>
+        <ul>
+          <li>support@berniertech.com</li>
+          <li>Typical response target: 24 to 48 hours</li>
+          <li>Critical issues escalated based on severity</li>
+        </ul>
+      </aside>
+    </div>
   </header>
 
-  <div class="section">
-    <h2>Technical Support</h2>
+  <main>
+    <section class="section">
+      <span class="kicker">Severity Levels</span>
+      <h2>Support handling model.</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Sev-1</h3>
+          <p>Critical impact, service unavailable, or major outage. Immediate priority.</p>
+        </article>
+        <article class="card">
+          <h3>Sev-2</h3>
+          <p>Major functionality degraded. Same-day handling where possible.</p>
+        </article>
+        <article class="card">
+          <h3>Sev-3</h3>
+          <p>General support queries or lower-impact issues. Typical response within 24 to 48 hours.</p>
+        </article>
+      </div>
+    </section>
 
-    <p>Bernier Tech provides email-based technical support for all customers. We typically respond within <strong>24–48 hours</strong>, with critical issues prioritised.</p>
+  </main>
 
-    <p><strong>Support email:</strong> support@berniertech.com</p>
-
-    <h3>Severity Levels</h3>
-    <ul>
-      <li><strong>Sev-1:</strong> Critical impact – service unavailable or major outage. Response: <strong>Immediate priority</strong>.</li>
-      <li><strong>Sev-2:</strong> Major functionality degraded. Response: <strong>Same day</strong>.</li>
-      <li><strong>Sev-3:</strong> General queries or minor issues. Response: <strong>24–48 hours</strong>.</li>
-    </ul>
-
-    <h3>What to Include in Your Request</h3>
-    <ul>
-      <li>Clear description of the issue</li>
-      <li>Steps to reproduce</li>
-      <li>Relevant logs, screenshots, or error messages</li>
-      <li>Environment or configuration details</li>
-    </ul>
-
-    <hr />
-
-    <h2 lang="es">Soporte Técnico</h2>
-
-    <p lang="es">Bernier Tech ofrece soporte técnico por correo electrónico para todos los clientes. Generalmente respondemos en un plazo de <strong>24–48 horas</strong>, dando prioridad a los incidentes críticos.</p>
-
-    <p lang="es"><strong>Correo de soporte:</strong> support@berniertech.com</p>
-
-    <h3 lang="es">Niveles de Severidad</h3>
-    <ul lang="es">
-      <li><strong>Sev-1:</strong> Impacto crítico – servicio caído o interrupción grave. Respuesta: <strong>Prioridad inmediata</strong>.</li>
-      <li><strong>Sev-2:</strong> Funcionalidad principal degradada. Respuesta: <strong>En el mismo día</strong>.</li>
-      <li><strong>Sev-3:</strong> Consultas generales o problemas menores. Respuesta: <strong>24–48 horas</strong>.</li>
-    </ul>
-
-    <h3 lang="es">Información Requerida</h3>
-    <ul lang="es">
-      <li>Descripción clara del problema</li>
-      <li>Pasos para reproducirlo</li>
-      <li>Logs, capturas o mensajes de error</li>
-      <li>Detalles del entorno o configuración</li>
-    </ul>
-  </div>
-
-  <footer>
-    © 2025 Bernier Tech — All rights reserved.
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>© 2026 Bernier Tech. All rights reserved.</span>
+      <span>United Kingdom · Remote Worldwide</span>
+    </div>
   </footer>
-
 </body>
 </html>
