@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bernier Tech Savings for AWS | Bernier Tech</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .report-gallery img {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html">
+        <img src="logo.png" alt="Bernier Tech Logo" />
+        <span>
+          <span class="brand-title">Bernier Tech</span>
+          <span class="brand-subtitle">FinOps · AWS · SRE · Cloud Advisory</span>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <div class="nav-group">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="products.html">Products</a>
+          <a href="support.html">Support</a>
+          <a href="security.html">Security</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms-and-conditions.html">Terms</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="refund-policy.html">Refund</a>
+        </div>
+        <div class="nav-group">
+          <span class="lang-switch" aria-label="Language switcher">
+            <span class="current">EN</span>
+            <span>/</span>
+            <a href="es/index.html" lang="es" hreflang="es">ES</a>
+          </span>
+          <a class="nav-cta" href="contact.html">Book a Consultation</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="hero">
+      <div>
+        <span class="eyebrow">Product Details</span>
+        <h1>Bernier Tech Savings for AWS</h1>
+        <p>AWS cost optimization platform for security-first teams. Scan your cloud footprint, surface waste and rightsizing opportunities, and cut recurring spend with clear operational priorities.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="product-controls">
+        <div class="control-group">
+          <label for="language-select">Language:</label>
+          <select id="language-select" style="padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 6px; background-color: #ffffff; font-family: inherit; font-size: 16px; color: #333; cursor: pointer; min-width: 120px;">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="it">Italiano</option>
+            <option value="pt">Português</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文</option>
+            <option value="ru">Русский</option>
+            <option value="ar">العربية</option>
+            <option value="hi">हिन्दी</option>
+            <option value="ko">한국어</option>
+            <option value="nl">Nederlands</option>
+            <option value="bn">বাংলা</option>
+            <option value="ur">اردو</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label for="currency-select">Currency:</label>
+          <select id="currency-select" style="padding: 10px 12px; border: 2px solid #e0e0e0; border-radius: 6px; background-color: #ffffff; font-family: inherit; font-size: 16px; color: #333; cursor: pointer; min-width: 80px;">
+            <option value="USD">USD</option>
+            <option value="GBP">GBP</option>
+            <option value="EUR">EUR</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-content" id="product-content">
+        <div class="product-hero">
+          <h3 id="hero-title">AWS Cost Optimization Platform for Security-First Teams</h3>
+          <p id="hero-lead">Bernier Tech Savings for AWS scans your cloud footprint, surfaces waste and rightsizing opportunities, and helps teams cut recurring spend with clear operational priorities.</p>
+        </div>
+
+        <div class="product-features">
+          <h3 id="why-title">What this tool does</h3>
+          <p id="why-text">The platform analyzes AWS usage patterns, identifies high-confidence savings opportunities, and generates clear JSON, CSV, HTML, and PDF reports. Teams use it for monthly FinOps cycles, engineering backlogs, and executive cost governance.</p>
+        </div>
+
+        <div class="product-ui-preview">
+          <h3 id="preview-title">Localized UI Preview</h3>
+          <img id="ui-preview" src="assets/products/bernier-tech-savings-for-aws/English.png" alt="UI Preview" />
+        </div>
+
+        <div class="product-pricing">
+          <h3>Pricing</h3>
+          <div class="pricing-grid">
+            <div class="pricing-card">
+              <h4>Free</h4>
+              <p>$0</p>
+              <ul>
+                <li id="free-get">Up to 10 findings with masked details to validate scan quality and fit.</li>
+                <li id="free-best">Best for PoC and early evaluation</li>
+              </ul>
+              <a href="#" class="button" id="download-free">Download Free</a>
+            </div>
+            <div class="pricing-card">
+              <h4>Standard</h4>
+              <p id="standard-price">$49</p>
+              <ul>
+                <li id="standard-get">Full unmasked findings in JSON/CSV/HTML/PDF for complete cost analysis and reporting.</li>
+                <li id="standard-best">Best for FinOps operations and monthly optimization cycles</li>
+              </ul>
+              <a href="#" class="button button-primary" id="download-standard">Download Standard</a>
+            </div>
+            <div class="pricing-card">
+              <h4>Pro</h4>
+              <p id="pro-price">$249</p>
+              <ul>
+                <li id="pro-get">Everything in Standard plus remediation playbooks with implementation steps and safer execution guidance.</li>
+                <li id="pro-best">Best for teams that want execution-ready cost reduction</li>
+              </ul>
+              <a href="#" class="button button-primary" id="download-pro">Download Pro</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-reports">
+          <h3>Report Examples</h3>
+          <div class="report-gallery">
+            <figure>
+              <img src="assets/products/bernier-tech-savings-for-aws/free-mode-report.png" alt="Free Report Example" />
+              <figcaption>Free Edition Report</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/products/bernier-tech-savings-for-aws/Standard-report-spanish-version-2.png" alt="Standard Report Example" />
+              <figcaption>Standard Edition Report</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/products/bernier-tech-savings-for-aws/Professional-report-2.png" alt="Professional Report 2" />
+              <figcaption>Pro Edition Report</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>© 2026 Bernier Tech. All rights reserved.</span>
+      <span>United Kingdom · Remote Worldwide</span>
+    </div>
+  </footer>
+
+  <div id="image-modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Enlarged Image">
+  </div>
+
+  <script>
+    const copy = {
+      en: {
+        hero: "AWS Cost Optimization Platform for Security-First Teams",
+        lead: "Bernier Tech Savings for AWS scans your cloud footprint, surfaces waste and rightsizing opportunities, and helps teams cut recurring spend with clear operational priorities.",
+        whyTitle: "What this tool does",
+        whyText: "The platform analyzes AWS usage patterns, identifies high-confidence savings opportunities, and generates clear JSON, CSV, HTML, and PDF reports. Teams use it for monthly FinOps cycles, engineering backlogs, and executive cost governance.",
+        previewTitle: "Localized UI Preview",
+        freeGet: "Up to 10 findings with masked details to validate scan quality and fit.",
+        freeBest: "PoC and early evaluation",
+        standardGet: "Full unmasked findings in JSON/CSV/HTML/PDF for complete cost analysis and reporting.",
+        standardBest: "FinOps operations and monthly optimization cycles",
+        proGet: "Everything in Standard plus remediation playbooks with implementation steps and safer execution guidance.",
+        proBest: "Teams that want execution-ready cost reduction",
+        downloadFree: "Download Free",
+        downloadStandard: "Download Standard",
+        downloadPro: "Download Pro"
+      },
+      es: {
+        hero: "Plataforma de optimización de costos AWS para equipos con foco en seguridad",
+        lead: "Bernier Tech Savings for AWS analiza tu entorno cloud, detecta desperdicio y oportunidades de rightsizing, y ayuda a reducir gasto recurrente con prioridades claras.",
+        whyTitle: "Qué hace la herramienta",
+        whyText: "La plataforma analiza patrones de uso en AWS, identifica oportunidades de ahorro con alta confianza y genera reportes JSON, CSV, HTML y PDF listos para FinOps, ingeniería y dirección.",
+        previewTitle: "Vista previa de UI localizada",
+        freeGet: "Hasta 10 hallazgos con datos enmascarados para validar el valor del escaneo.",
+        freeBest: "PoC y evaluación inicial",
+        standardGet: "Hallazgos completos sin enmascarar en JSON/CSV/HTML/PDF para análisis total de costos.",
+        standardBest: "Operación FinOps y ciclos mensuales de optimización",
+        proGet: "Todo lo de Standard más playbooks de remediación con pasos de implementación.",
+        proBest: "Equipos que quieren reducción de costos lista para ejecutar",
+        downloadFree: "Descargar Free",
+        downloadStandard: "Descargar Standard",
+        downloadPro: "Descargar Pro"
+      },
+      fr: {
+        hero: "Plateforme d'optimisation des coûts AWS pour les équipes orientées sécurité",
+        lead: "Bernier Tech Savings for AWS analyse votre environnement cloud, détecte les gaspillages et les opportunités de redimensionnement, et aide à réduire les dépenses récurrentes avec des priorités opérationnelles claires.",
+        whyTitle: "Ce que fait l'outil",
+        whyText: "La plateforme analyse les modèles d'utilisation AWS, identifie les opportunités d'économies à haute confiance et génère des rapports JSON, CSV, HTML et PDF clairs. Les équipes l'utilisent pour les cycles FinOps mensuels, les backlogs d'ingénierie et la gouvernance des coûts exécutifs.",
+        previewTitle: "Aperçu UI localisé",
+        freeGet: "Jusqu'à 10 découvertes avec détails masqués pour valider la qualité du scan.",
+        freeBest: "PoC et évaluation précoce",
+        standardGet: "Découvertes complètes non masquées en JSON/CSV/HTML/PDF pour l'analyse complète des coûts.",
+        standardBest: "Opérations FinOps et cycles d'optimisation mensuels",
+        proGet: "Tout ce qui est dans Standard plus les playbooks de remédiation avec étapes d'implémentation.",
+        proBest: "Équipes qui veulent une réduction des coûts prête à l'exécution",
+        downloadFree: "Télécharger Gratuit",
+        downloadStandard: "Télécharger Standard",
+        downloadPro: "Télécharger Pro"
+      },
+      de: {
+        hero: "AWS-Kostenoptimierungsplattform für sicherheitsorientierte Teams",
+        lead: "Bernier Tech Savings for AWS scannt Ihre Cloud-Umgebung, deckt Verschwendung und Rightsizing-Möglichkeiten auf und hilft Teams, wiederkehrende Ausgaben mit klaren operativen Prioritäten zu reduzieren.",
+        whyTitle: "Was das Tool macht",
+        whyText: "Die Plattform analysiert AWS-Nutzungsmuster, identifiziert hochzuverlässige Einsparungsmöglichkeiten und generiert klare JSON-, CSV-, HTML- und PDF-Berichte. Teams nutzen es für monatliche FinOps-Zyklen, Engineering-Backlogs und Executive-Kostengovernance.",
+        previewTitle: "Lokalisierte UI-Vorschau",
+        freeGet: "Bis zu 10 Funde mit maskierten Details zur Validierung der Scan-Qualität.",
+        freeBest: "PoC und frühe Bewertung",
+        standardGet: "Vollständige unmaskierte Funde in JSON/CSV/HTML/PDF für vollständige Kostenanalyse.",
+        standardBest: "FinOps-Operationen und monatliche Optimierungszyklen",
+        proGet: "Alles aus Standard plus Remediation-Playbooks mit Implementierungsschritten.",
+        proBest: "Teams, die ausführungsreife Kostensenkung wollen",
+        downloadFree: "Kostenlos herunterladen",
+        downloadStandard: "Standard herunterladen",
+        downloadPro: "Pro herunterladen"
+      },
+      it: {
+        hero: "Piattaforma di ottimizzazione costi AWS per team orientati alla sicurezza",
+        lead: "Bernier Tech Savings for AWS scansiona il tuo footprint cloud, evidenzia sprechi e opportunità di rightsizing, e aiuta i team a ridurre le spese ricorrenti con priorità operative chiare.",
+        whyTitle: "Cosa fa lo strumento",
+        whyText: "La piattaforma analizza i pattern di utilizzo AWS, identifica opportunità di risparmio ad alta fiducia e genera report JSON, CSV, HTML e PDF chiari. I team lo usano per cicli FinOps mensili, backlog di ingegneria e governance costi esecutiva.",
+        previewTitle: "Anteprima UI localizzata",
+        freeGet: "Fino a 10 risultati con dettagli mascherati per convalidare la qualità della scansione.",
+        freeBest: "PoC e valutazione iniziale",
+        standardGet: "Risultati completi non mascherati in JSON/CSV/HTML/PDF per analisi costi completa.",
+        standardBest: "Operazioni FinOps e cicli di ottimizzazione mensili",
+        proGet: "Tutto in Standard più playbook di remediation con passi di implementazione.",
+        proBest: "Team che vogliono riduzione costi pronta all'esecuzione",
+        downloadFree: "Scarica Gratuito",
+        downloadStandard: "Scarica Standard",
+        downloadPro: "Scarica Pro"
+      },
+      pt: {
+        hero: "Plataforma de otimização de custos AWS para equipes focadas em segurança",
+        lead: "Bernier Tech Savings for AWS escaneia seu ambiente cloud, destaca desperdícios e oportunidades de rightsizing, e ajuda equipes a reduzir gastos recorrentes com prioridades operacionais claras.",
+        whyTitle: "O que a ferramenta faz",
+        whyText: "A plataforma analisa padrões de uso AWS, identifica oportunidades de economia de alta confiança e gera relatórios JSON, CSV, HTML e PDF claros. As equipes usam para ciclos FinOps mensais, backlogs de engenharia e governança de custos executiva.",
+        previewTitle: "Pré-visualização UI localizada",
+        freeGet: "Até 10 descobertas com detalhes mascarados para validar a qualidade da varredura.",
+        freeBest: "PoC e avaliação inicial",
+        standardGet: "Descobertas completas não mascaradas em JSON/CSV/HTML/PDF para análise completa de custos.",
+        standardBest: "Operações FinOps e ciclos de otimização mensais",
+        proGet: "Tudo no Standard mais playbooks de remediation com passos de implementação.",
+        proBest: "Equipes que querem redução de custos pronta para execução",
+        downloadFree: "Baixar Gratuito",
+        downloadStandard: "Baixar Standard",
+        downloadPro: "Baixar Pro"
+      },
+      ja: {
+        hero: "セキュリティ重視のチーム向けAWSコスト最適化プラットフォーム",
+        lead: "Bernier Tech Savings for AWSはクラウド環境をスキャンし、無駄とrightsizingの機会を表面化し、明確な運用優先順位で定期支出を削減します。",
+        whyTitle: "ツールの機能",
+        whyText: "プラットフォームはAWS使用パターンを分析し、高信頼の節約機会を特定し、明確なJSON、CSV、HTML、PDFレポートを生成します。チームは月次FinOpsサイクル、エンジニアリングバックログ、経営コストガバナンスに使用します。",
+        previewTitle: "ローカライズされたUIプレビュー",
+        freeGet: "スキャン品質を検証するためのマスクされた詳細を含む最大10件の発見。",
+        freeBest: "PoCと初期評価",
+        standardGet: "完全なコスト分析のためのJSON/CSV/HTML/PDFでの完全な非マスク発見。",
+        standardBest: "FinOps運用と月次最適化サイクル",
+        proGet: "Standardのすべてに加えて、実装ステップ付きのremediation playbooks。",
+        proBest: "実行準備済みのコスト削減を望むチーム",
+        downloadFree: "無料ダウンロード",
+        downloadStandard: "Standardダウンロード",
+        downloadPro: "Proダウンロード"
+      },
+      zh: {
+        hero: "面向安全优先团队的AWS成本优化平台",
+        lead: "Bernier Tech Savings for AWS扫描您的云环境，揭示浪费和rightsizing机会，并帮助团队通过明确的运营优先级减少经常性支出。",
+        whyTitle: "工具功能",
+        whyText: "平台分析AWS使用模式，识别高置信度节省机会，并生成清晰的JSON、CSV、HTML和PDF报告。团队将其用于月度FinOps周期、工程积压和执行成本治理。",
+        previewTitle: "本地化UI预览",
+        freeGet: "最多10个发现，带有掩码细节以验证扫描质量。",
+        freeBest: "PoC和早期评估",
+        standardGet: "JSON/CSV/HTML/PDF中的完整未掩码发现，用于完整成本分析。",
+        standardBest: "FinOps运营和月度优化周期",
+        proGet: "Standard中的所有内容加上带有实施步骤的remediation playbooks。",
+        proBest: "想要执行就绪成本削减的团队",
+        downloadFree: "免费下载",
+        downloadStandard: "Standard下载",
+        downloadPro: "Pro下载"
+      },
+      ru: {
+        hero: "Платформа оптимизации затрат AWS для команд, ориентированных на безопасность",
+        lead: "Bernier Tech Savings for AWS сканирует ваш облачный след, выявляет отходы и возможности rightsizing, и помогает командам сокращать регулярные расходы с четкими операционными приоритетами.",
+        whyTitle: "Что делает инструмент",
+        whyText: "Платформа анализирует паттерны использования AWS, идентифицирует возможности экономии с высокой уверенностью и генерирует четкие отчеты JSON, CSV, HTML и PDF. Команды используют его для ежемесячных циклов FinOps, инженерных бэклогов и исполнительного управления затратами.",
+        previewTitle: "Локализованный превью UI",
+        freeGet: "До 10 находок с маскированием деталей.",
+        freeBest: "PoC и первая оценка",
+        standardGet: "Полные не маскированные находки в JSON/CSV/HTML/PDF.",
+        standardBest: "FinOps операции и месячные циклы оптимизации",
+        proGet: "Все из Standard плюс remediation playbooks.",
+        proBest: "Команды, готовые к исполнению",
+        downloadFree: "Скачать Free",
+        downloadStandard: "Standard скачать",
+        downloadPro: "Pro скачать"
+      },
+      ar: {
+        hero: "تحسين تكاليف AWS بسرعة وبشكل عملي للفرق",
+        lead: "Bernier Tech Savings for AWS يقوم بمسح بيئة السحابة لاكتشاف الهدر وفرص التحسين وفجوات الحوكمة لتقليل التكلفة الشهرية.",
+        whyTitle: "ماذا تفعل الأداة",
+        whyText: "تحلل المنصة أنماط استخدام AWS وتحدد فرص التوفير وتولّد تقارير JSON وCSV وHTML وPDF لفرق FinOps.",
+        previewTitle: "معاينة واجهة مستخدم محلية",
+        freeGet: "حتى 10 نتائج مع تفاصيل مخفية.",
+        freeBest: "PoC وتقييم أولي",
+        standardGet: "نتائج كاملة غير مخفية في JSON/CSV/HTML/PDF.",
+        standardBest: "عمليات FinOps ودورات شهرية",
+        proGet: "كل شيء في Standard بالإضافة إلى playbooks للإصلاح.",
+        proBest: "فرق جاهزة للتنفيذ",
+        downloadFree: "تحميل Free",
+        downloadStandard: "تحميل Standard",
+        downloadPro: "تحميل Pro"
+      },
+      hi: {
+        hero: "AWS लागत अनुकूलन — तेज़, उपयोगी और टीम-रेडी",
+        lead: "Bernier Tech Savings for AWS आपके क्लाउड वातावरण को स्कैन करके वेस्ट, rightsizing अवसर और governance gap पहचानता है।",
+        whyTitle: "यह टूल क्या करता है",
+        whyText: "यह AWS usage patterns का विश्लेषण करता है, संभावित बचत दिखाता है और JSON/CSV/HTML/PDF रिपोर्ट देता है।",
+        previewTitle: "स्थानीयकृत UI पूर्वावलोकन",
+        freeGet: "अधिकतम 10 निष्कर्ष, विवरण मास्क किए हुए।",
+        freeBest: "PoC और प्रारंभिक मूल्यांकन",
+        standardGet: "पूर्ण निष्कर्ष JSON/CSV/HTML/PDF में।",
+        standardBest: "FinOps संचालन और मासिक चक्र",
+        proGet: "Standard में सब कुछ प्लस remediation playbooks।",
+        proBest: "निष्पादन-प्रस্তुत टीम",
+        downloadFree: "Free डाउनलोड करें",
+        downloadStandard: "Standard डाउनलोड करें",
+        downloadPro: "Pro डाउनलोड करें"
+      },
+      ko: {
+        hero: "AWS 비용 최적화, 빠르고 실행 가능하게",
+        lead: "Bernier Tech Savings for AWS는 클라우드 환경을 스캔해 낭비, 권장 리사이징, 거버넌스 이슈를 찾아 월 비용 절감을 돕습니다.",
+        whyTitle: "도구 기능",
+        whyText: "AWS 사용 패턴을 분석하고 잠재 절감 포인트를 식별하여 JSON/CSV/HTML/PDF 보고서를 제공합니다.",
+        previewTitle: "현지화된 UI 미리보기",
+        freeGet: "최대 10개 발견, 세부 사항 마스킹.",
+        freeBest: "PoC 및 초기 평가",
+        standardGet: "JSON/CSV/HTML/PDF 전체 발견.",
+        standardBest: "FinOps 운영 및 월간 최적화",
+        proGet: "Standard의 모든 것 + remediation playbooks.",
+        proBest: "실행 준비 팀",
+        downloadFree: "Free 다운로드",
+        downloadStandard: "Standard 다운로드",
+        downloadPro: "Pro 다운로드"
+      },
+      nl: {
+        hero: "AWS-kosten optimaliseren — snel, praktisch en teamgericht",
+        lead: "Bernier Tech Savings for AWS scant je cloudomgeving en toont verspilling, rightsizing-kansen en governance-gaten.",
+        whyTitle: "Wat de tool doet",
+        whyText: "Het platform analyseert AWS-gebruik, berekent potentiële besparingen en levert JSON-, CSV-, HTML- en PDF-rapporten.",
+        previewTitle: "Gelokaliseerde UI-voorbeeld",
+        freeGet: "Tot 10 bevindingen met gemaskeerde details.",
+        freeBest: "PoC en eerste evaluatie",
+        standardGet: "Volledige bevindingen in JSON/CSV/HTML/PDF.",
+        standardBest: "FinOps-operaties en maandelijkse cycli",
+        proGet: "Alles uit Standard plus remediation playbooks.",
+        proBest: "Teams klaar voor uitvoering",
+        downloadFree: "Free downloaden",
+        downloadStandard: "Standard downloaden",
+        downloadPro: "Pro downloaden"
+      },
+      bn: {
+        hero: "AWS খরচ অপ্টিমাইজেশন — দ্রুত, কার্যকর, টিম-রেডি",
+        lead: "Bernier Tech Savings for AWS আপনার ক্লাউড স্ক্যান করে অপচয়, rightsizing সুযোগ এবং governance gap শনাক্ত করে।",
+        whyTitle: "টুলটি কী করে",
+        whyText: "এটি AWS usage pattern বিশ্লেষণ করে সম্ভাব্য সাশ্রয় দেখায় এবং JSON/CSV/HTML/PDF রিপোর্ট তৈরি করে।",
+        previewTitle: "স্থানীয়কৃত UI প্রিভিউ",
+        freeGet: "সর্বোচ্চ 10টি ফাইন্ডিং, বিস্তারিত মাস্ক করা।",
+        freeBest: "PoC এবং প্রাথমিক মূল্যায়ন",
+        standardGet: "পূর্ণ ফাইন্ডিং JSON/CSV/HTML/PDF-এ।",
+        standardBest: "FinOps অপারেশন এবং মাসিক চক্র",
+        proGet: "Standard-এর সবকিছু + remediation playbooks।",
+        proBest: "নির্বাহ-প্রস্তুত টিম",
+        downloadFree: "Free ডাউনলোড করুন",
+        downloadStandard: "Standard ডাউনলোড করুন",
+        downloadPro: "Pro ডাউনলোড করুন"
+      },
+      ur: {
+        hero: "AWS لاگت کی بہتری — تیز، عملی اور ٹیم کے لیے تیار",
+        lead: "Bernier Tech Savings for AWS آپ کے کلاؤڈ ماحول کو اسکین کر کے ضیاع، rightsizing مواقع اور governance gaps دکھاتا ہے۔",
+        whyTitle: "یہ ٹول کیا کرتا ہے",
+        whyText: "یہ AWS usage patterns کا تجزیہ کرتا ہے، ممکنہ بچت بتاتا ہے اور JSON/CSV/HTML/PDF رپورٹس تیار کرتا ہے۔",
+        previewTitle: "مقامی UI پیش نظارہ",
+        freeGet: "زیادہ سے زیادہ 10 نتائج، تفصیلات ماسک کی گئیں۔",
+        freeBest: "PoC اور ابتدائی تشخیص",
+        standardGet: "مکمل نتائج JSON/CSV/HTML/PDF میں۔",
+        standardBest: "FinOps آپریشنز اور ماہانہ سائیکل",
+        proGet: "Standard میں سب کچھ + remediation playbooks۔",
+        proBest: "نفاذ کے لیے تیار ٹیمیں",
+        downloadFree: "Free ڈاؤن لوڈ کریں",
+        downloadStandard: "Standard ڈاؤن لوڈ کریں",
+        downloadPro: "Pro ڈاؤن لوڈ کریں"
+      }
+    };
+
+    const uiByLang = {
+      en: "English.png",
+      es: "Spanish.png",
+      fr: "Francais.png",
+      de: "Deutsch.png",
+      it: "Italiano.png",
+      pt: "Portugues.png",
+      ja: "Japanese.png",
+      zh: "Mandarin.png",
+      ru: "Russian.png",
+      ar: "Arabic.png",
+      hi: "Hindi.png",
+      ko: "Korean.png",
+      nl: "Nederlands.png",
+      bn: "Bengali.png",
+      ur: "Urdu.png"
+    };
+
+    const prices = {
+      USD: { standard: 49, pro: 249 },
+      GBP: { standard: 49, pro: 249 },
+      EUR: { standard: 49, pro: 249 }
+    };
+
+    document.getElementById('language-select').addEventListener('change', function() {
+      const lang = this.value;
+      const data = copy[lang];
+      document.getElementById('hero-title').textContent = data.hero;
+      document.getElementById('hero-lead').textContent = data.lead;
+      document.getElementById('why-title').textContent = data.whyTitle;
+      document.getElementById('why-text').textContent = data.whyText;
+      document.getElementById('preview-title').textContent = data.previewTitle;
+      document.getElementById('ui-preview').src = `assets/products/bernier-tech-savings-for-aws/${uiByLang[lang]}`;
+      document.getElementById('free-get').textContent = data.freeGet;
+      document.getElementById('free-best').textContent = data.freeBest;
+      document.getElementById('standard-get').textContent = data.standardGet;
+      document.getElementById('standard-best').textContent = data.standardBest;
+      document.getElementById('pro-get').textContent = data.proGet;
+      document.getElementById('pro-best').textContent = data.proBest;
+      document.getElementById('download-free').textContent = data.downloadFree;
+      document.getElementById('download-standard').textContent = data.downloadStandard;
+      document.getElementById('download-pro').textContent = data.downloadPro;
+    });
+
+    document.getElementById('currency-select').addEventListener('change', function() {
+      const currency = this.value;
+      const currPrices = prices[currency];
+      document.getElementById('standard-price').textContent = `${currency === 'USD' ? '$' : currency === 'GBP' ? '£' : '€'}${currPrices.standard}`;
+      document.getElementById('pro-price').textContent = `${currency === 'USD' ? '$' : currency === 'GBP' ? '£' : '€'}${currPrices.pro}`;
+    });
+
+    // Image modal functionality
+    var modal = document.getElementById('image-modal');
+    var modalImg = document.getElementById('modal-img');
+    var images = document.querySelectorAll('.report-gallery img');
+
+    images.forEach(function(img) {
+      img.onclick = function() {
+        modal.style.display = "flex";
+        modalImg.src = this.src;
+        modalImg.alt = this.alt;
+      };
+    });
+
+    var closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    };
+
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
+</body>
+</html>
